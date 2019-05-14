@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import styles from './ColorPicker.css';
 
 export default class RandomColor extends PureComponent {
   state = {
-    color: ''
+    color: '',
+    img: ''
   }
 
   
@@ -14,18 +13,21 @@ export default class RandomColor extends PureComponent {
     return colors[randomNumber];
   }
 
+
   componentDidMount() {
     this.intervalId = setInterval(() => {
-      this.setState({ color: this.randomColor(), trigger: new Date(), img: '' });
-    }, 1000);
+      this.setState({ color: this.randomize(), img: '' });
+    }, 500);
   }
 
   render() { 
     const color = this.state.color;
-    return (
-      <>
-        <div className={color}>Color Here</div>
-      </>
-    );
+    const divStyle = {
+      backgroundColor: color,
+      height: '50000px',
+      width: '10000px'
+    };
+    
+    return <div style={divStyle}></div>;
   }
 }
