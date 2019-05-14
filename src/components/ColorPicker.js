@@ -12,7 +12,7 @@ export default function ColorPicker({ colorHandler }) {
   );   
 }
 
-ColorPicker.PropTypes = {
+ColorPicker.propTypes = {
   colorHandler: PropTypes.func.isRequired
 };
 
