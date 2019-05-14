@@ -1,15 +1,21 @@
 .ColorPicker{
   border: 2px solid black;
   
-  button.red{
+  .red{
     background-color: red;
   }
-  button.green{
+  .green{
     background-color:green;
   }
   
-  button.blue{
+  .blue{
     background-color: blue;
   }
+  
+  div {
+    width: 500px;
+    height: 200px;
+  }
 }
+
 
