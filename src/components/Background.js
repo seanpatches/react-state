@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 const randomColor = require('randomcolor');
+import style from './RandomColor.css';
+
 
 export default class RandomColor extends PureComponent {
   state = {
@@ -29,10 +31,11 @@ export default class RandomColor extends PureComponent {
 
     const divStyle = {
       background: img ? `center / contain url(${img})` : color,
-      height: '100px',
-      width: '200px',
-      margin: '10px',
-      transition: `background-color ${this.state.speed}ms linear`
+      height: '150vh',
+      width: '150vw',
+      zIndex: '1',
+      margin: '-100px',
+      transition: `background-color ${this.state.speed}ms linear`,
     };
     
     return (

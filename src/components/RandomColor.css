@@ -2,5 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  z-index: 2;
+  position: absolute;
+  bottom: -210px;
 }
