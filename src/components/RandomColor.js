@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import style from './RandomColor.css';
 
 export default class RandomColor extends PureComponent {
   state = {
