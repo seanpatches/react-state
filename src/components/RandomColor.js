@@ -4,12 +4,14 @@ export default class RandomColor extends PureComponent {
   state = {
     color: '',
     trigger: new Date(),
-    img: ''
+    img: '',
+    speed: (Math.random() * 1000)
   }
+
 
   
   randomize = () => {
-    const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'steelblue', 'orange'];
+    const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
     const randomNumber = Math.floor(Math.random() * colors.length);
     return colors[randomNumber];
   }
@@ -17,7 +19,7 @@ export default class RandomColor extends PureComponent {
   componentDidMount() {
     this.intervalId = setInterval(() => {
       this.setState({ color: this.randomize(), img: '', trigger: new Date() });
-    }, (Math.random() * 1000));
+    }, this.state.speed);
   }
 
   // componentDidUpdate(prevProps, prevState){
@@ -35,7 +37,8 @@ export default class RandomColor extends PureComponent {
       background: img ? `center / contain url(${img})` : color,
       height: '100px',
       width: '200px',
-      margin: '10px'
+      margin: '10px',
+      transition: `background-color ${this.state.speed}ms linear`
     };
     
     return (
