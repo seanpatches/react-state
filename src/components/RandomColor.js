@@ -21,11 +21,11 @@ export default class RandomColor extends PureComponent {
     }, (Math.random() * 1000));
   }
 
-  componentDidUpdate(prevProps, prevState){
-    if(prevState.color === this.state.color){
-      this.setState({ img: 'https://cdn.ebaumsworld.com/mediaFiles/picture/1035099/85708057.jpg' });
-    }
-  }
+  // componentDidUpdate(prevProps, prevState){
+  //   if(prevState.color === this.state.color){
+  //     this.setState({ img: 'https://cdn.ebaumsworld.com/mediaFiles/picture/1035099/85708057.jpg' });
+  //   }
+  // }
 
 
   render() { 
